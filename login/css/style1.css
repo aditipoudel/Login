@@ -1,0 +1,128 @@
+header{background: greenyellow;
+    height: 50px;
+}
+
+body {background: #34495e;}
+.swing {
+    animation: swing ease-in-out 2s infinite alternate;
+    transform-origin: center -20px;
+    float:left;
+    
+    width: 300px;
+    height: 300px;
+    margin-left: 0%;
+
+}
+.swing img {
+    border: 5px solid #f8f8f8;
+    display: block;
+}
+.swing:after{
+    content: '';
+    position: absolute;  
+    width: 20px; height: 20px;  
+    border: 1px solid #999;
+    top: -10px; left: 50%;
+    z-index: 0;
+    border-bottom: none;
+    border-right: none;
+    transform: rotate(45deg);
+}
+
+.swing:before{
+    content: '';
+    position: absolute;
+    width: 5px; height: 5px;
+    top: -14px;left: 54%;
+    z-index: 5;
+    border-radius: 50% 50%;
+    background: #000;
+}
+ 
+@keyframes swing {
+    0% { transform: rotate(3deg); }
+    100% { transform: rotate(-3deg); }
+}
+
+.about-section{
+    overflow: hidden;
+    text-align: center;
+    background: #34495e;
+    padding: 60px;
+    position: initial;
+}
+.about-section h1{
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: white;
+    margin-top: 2px;
+
+}
+
+.border{
+    display: block;
+    margin: auto;
+    width: 200px;
+    height: 3px;
+    background:#3498db;
+    margin-top:10px;
+    margin-bottom: 5px;
+}
+
+.ps{
+    margin-bottom: 40px;
+}
+
+
+.ps a{
+    display: inline-block;
+    margin:0 30px;
+    width:160px;
+    height:160px;
+    overflow:hidden;
+    border-radius: 50%;
+}
+
+.ps a img{
+   width: 180%;
+  
+    transition: 0.4s all;
+}
+
+.ps a:hover >img{
+    filter:  grayscale(100%);
+}
+
+.section{
+width: 600px;
+margin:auto;
+font-size:20px;
+color: white;
+text-align: justify;
+height: 0;
+overflow:hidden;
+}
+
+.section:target
+{
+    height: auto;
+}
+
+.name{
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+
+button{
+    width: 100px;
+    height: 50px;
+    float:right;
+    font-size: 20px;
+    background: plum;
+    font-family: 'Times New Roman', Times, serif;
+
+}
